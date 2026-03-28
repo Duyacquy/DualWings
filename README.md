@@ -4,31 +4,31 @@
 [![Netcode](https://img.shields.io/badge/Netcode-NGO-orange.svg?style=flat-square)](https://unity.com/products/netcode)
 [![Language](https://img.shields.io/badge/C%23-.NET-blue.svg?style=flat-square)](https://learn.microsoft.com/en-us/dotnet/csharp/)
 
-**Dual Wings** là một dự án game bắn máy bay Multiplayer (Co-op) độc đáo, nơi **hai người chơi cùng hợp tác để điều hành duy nhất một phi thuyền** với nhiệm vụ đánh bại Boss. Dự án tập trung vào việc giải quyết các thách thức về đồng bộ hóa đầu vào (Input Synchronization), tối ưu hóa tài nguyên mạng và xây dựng hệ thống Boss AI đa trạng thái.
+**Dual Wings** là một dự án game bắn máy bay Multiplayer (Co-op) độc đáo, nơi **hai người chơi cùng hợp tác để điều hành duy nhất một phi thuyền** với nhiệm vụ đánh bại Boss. Dự án tập trung vào việc giải quyết các thách thức về đồng bộ hóa đầu vào, tối ưu hóa tài nguyên mạng và xây dựng hệ thống Boss đa trạng thái.
 
 ---
 
-## Tính năng nổi bật (Technical Highlights)
+## Tính năng nổi bật
 
-### 1. Cơ chế "Shared Control" (Collaborative Input)
-* **Collaborative Steering:** Hai người chơi (Host & Client) cùng chia sẻ quyền điều khiển một thực thể (Player Plane). Hệ thống xử lý xung đột đầu vào (Input Conflict Handling) đảm bảo phi thuyền di chuyển mượt mà dựa trên sự phối hợp của cả hai bên.
+### 1. Cơ chế "Shared Control"
+* **Collaborative Steering:** Hai người chơi (Host & Client) cùng chia sẻ quyền điều khiển một thực thể (Player Plane). Host sẽ có nhiệm vụ di chuyển, né các chướng ngại vật và Client có nhiệm vụ bắn đạn và nhặt vật phẩm. Hệ thống xử lý xung đột đầu vào đảm bảo phi thuyền di chuyển mượt mà dựa trên sự phối hợp của cả hai bên.
 * **Co-op Strategy:** Yêu cầu sự giao tiếp và phối hợp chính xác để né tránh chướng ngại vật và tối ưu hóa góc bắn trong môi trường chiến đấu tốc độ cao.
 
 ### 2. Kiến trúc Network Authoritative
-* **Server-Authoritative Logic:** Mọi tính toán về va chạm (Collision), sát thương (Damage Calculation) và vị trí đều được xử lý tại Server nhằm ngăn chặn gian lận và đảm bảo tính nhất quán dữ liệu (Data Consistency).
+* **Server-Authoritative Logic:** Mọi tính toán về va chạm, sát thương và vị trí đều được xử lý tại Server nhằm ngăn chặn gian lận và đảm bảo tính nhất quán dữ liệu.
 * **State Synchronization:** Áp dụng `NetworkVariable` để đồng bộ thời gian thực các chỉ số quan trọng như trạng thái Khiên (Shield), Máu (Health) và các chỉ số nhân vật (Damage/Scale Buffs).
 
 ### 3. Tối ưu hóa hiệu suất (Optimization)
-* **Network Object Pooling:** Triển khai hệ thống Pool cho hàng nghìn viên đạn, giúp giảm thiểu chi phí bộ nhớ cho việc khởi tạo/hủy (Instantiate/Destroy) liên tục, loại bỏ hoàn toàn tình trạng giật lag (Lag Spikes) trong các giai đoạn bắn đạn dày đặc.
+* **Network Object Pooling:** Triển khai hệ thống Pool cho hàng nghìn viên đạn, giúp giảm thiểu chi phí bộ nhớ cho việc Instantiate/Destroy liên tục, loại bỏ hoàn toàn tình trạng giật lag (Lag Spikes) trong các giai đoạn bắn đạn dày đặc.
 
-### 4. Boss AI đa giai đoạn (Multi-phase Boss Logic)
-* **Phase-based AI:** Boss thay đổi hành vi tấn công linh hoạt dựa trên lượng máu còn lại (Laser Phase, Teleport, Random Movement Patterns), mang lại trải nghiệm thử thách và chiều sâu cho Gameplay.
+### 4. Boss đa giai đoạn (Multi-phase Boss Logic)
+* **Phase-based:** Boss thay đổi hành vi tấn công linh hoạt dựa trên lượng máu còn lại (Laser Phase, Teleport, Random Movement Patterns), mang lại trải nghiệm thử thách và chiều sâu cho Gameplay.
 
 ---
 
 ## Tech Stack
 
-* **Engine:** Unity 6 (6000.4.0f1) - Tận dụng các tính năng mới nhất của Unity 6.
+* **Engine:** Unity 6 (6000.4.0f1).
 * **Networking:** Unity Netcode for GameObjects (NGO).
 * **Transport:** Unity Transport (UTP) - Giao thức UDP cho độ trễ thấp.
 * **UI System:** TextMeshPro & Unity UI Toolkit.
@@ -46,7 +46,7 @@
 
 ## Hình ảnh dự án (Screenshots)
 
-| Lobby & Connection | Boss Fight (Laser Phase) | Victory Screen |
+| Lobby & Connection | Boss Fight | Victory Screen |
 | :--- | :--- | :--- |
 | ![Lobby](Screenshots/Lobby.png) | ![BossFight](Screenshots/BossFight.png) | ![Victory](Screenshots/Victory.png) |
 
