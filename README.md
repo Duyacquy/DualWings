@@ -48,7 +48,7 @@
 
 | Lobby & Connection | Boss Fight (Laser Phase) | Victory Screen |
 | :--- | :--- | :--- |
-| ![Lobby](https://via.placeholder.com/300x200?text=Lobby+UI) | ![BossFight](https://via.placeholder.com/300x200?text=Boss+Laser+Phase) | ![Victory](https://via.placeholder.com/300x200?text=Victory+UI) |
+| ![Lobby](Screenshots/Lobby.png) | ![BossFight](Screenshots/BossFight.png) | ![Victory](Screenshots/Victory.png) |
 
 ---
 
