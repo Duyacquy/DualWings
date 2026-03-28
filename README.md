@@ -18,10 +18,10 @@
 * **Server-Authoritative Logic:** Mọi tính toán về va chạm, sát thương và vị trí đều được xử lý tại Server nhằm ngăn chặn gian lận và đảm bảo tính nhất quán dữ liệu.
 * **State Synchronization:** Áp dụng `NetworkVariable` để đồng bộ thời gian thực các chỉ số quan trọng như trạng thái Khiên (Shield), Máu (Health) và các chỉ số nhân vật (Damage/Scale Buffs).
 
-### 3. Tối ưu hóa hiệu suất (Optimization)
+### 3. Tối ưu hóa hiệu suất
 * **Network Object Pooling:** Triển khai hệ thống Pool cho hàng nghìn viên đạn, giúp giảm thiểu chi phí bộ nhớ cho việc Instantiate/Destroy liên tục, loại bỏ hoàn toàn tình trạng giật lag (Lag Spikes) trong các giai đoạn bắn đạn dày đặc.
 
-### 4. Boss đa giai đoạn (Multi-phase Boss Logic)
+### 4. Boss đa giai đoạn
 * **Phase-based:** Boss thay đổi hành vi tấn công linh hoạt dựa trên lượng máu còn lại (Laser Phase, Teleport, Random Movement Patterns), mang lại trải nghiệm thử thách và chiều sâu cho Gameplay.
 
 ---
