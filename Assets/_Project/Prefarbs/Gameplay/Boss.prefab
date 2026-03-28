@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  maxHealth: 50
+  maxHealth: 1
   speed: 2
   firePoint: {fileID: 1993693261540234229}
   fireTime: 2.5
