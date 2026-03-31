@@ -6,6 +6,10 @@
 
 **Dual Wings** là một dự án game bắn máy bay Multiplayer (Co-op) độc đáo, nơi **hai người chơi cùng hợp tác để điều hành duy nhất một phi thuyền** với nhiệm vụ đánh bại Boss. Dự án tập trung vào việc giải quyết các thách thức về đồng bộ hóa đầu vào, tối ưu hóa tài nguyên mạng và xây dựng hệ thống Boss đa trạng thái.
 
+## Demo dự án
+Bạn có thể xem video thuyết minh chi tiết về gameplay dự án tại đây:
+- **Link Video Demo:** [Xem tại Google Drive](https://drive.google.com/file/d/1ZlnkSKLJh2XjAPrmgm0UVmkc9_LdwBZe/view?usp=sharing)
+
 ---
 
 ## Tính năng nổi bật
