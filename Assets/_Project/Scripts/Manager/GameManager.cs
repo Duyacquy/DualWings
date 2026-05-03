@@ -8,7 +8,7 @@ using Netcode.Extensions;
 
 public class GameManager : NetworkBehaviour
 {
-    public static GameManager Instance;
+    public static GameManager Instance { get; private set; }
     private NetworkVariable<bool> _isGameStartedNet = new NetworkVariable<bool>(false);
     public static bool isGameStarted => Instance != null && Instance._isGameStartedNet.Value;
 
@@ -41,6 +41,12 @@ public class GameManager : NetworkBehaviour
 
     void Awake()
     {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         Instance = this;
     }
 
